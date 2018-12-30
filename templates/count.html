@@ -1,0 +1,16 @@
+<h1>The Count Page</h1>
+<a href="{% url 'home'%}"> Go Back</a>
+<br>
+<h2>You Have {{ countwords }} Words In Your Page</h2><br>
+<h1>Your Text :</h1>
+<p>{{ fulltext }}</p>
+
+<h2>Word Counts</h2>
+<!--- this for loop to show the count every word  ---- the count made in views function-->
+{% for word , counttotal in sortedwords %}
+
+{{word}} -- {{counttotal}}
+<br>
+
+
+{% endfor %}
